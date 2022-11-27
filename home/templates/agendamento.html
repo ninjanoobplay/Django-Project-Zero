@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block 'title' %}Criar Agenda{% endblock %}
+
+{% block 'head' %}
+    <link rel="stylesheet" href="{% static 'agenda/css/agendar.css' %}">
+{% endblock %}
+
+{% block 'body' %}
+    <nav>
+        <!-- <a class="navbar-brand" href="{% url 'home'%}">
+            <img src="{% static 'autenticacao/img/VSBarbearia-White.png' %}" alt="logo VS Barbearia" width="60" height="50">
+        </a>
+        -->
+        <a class="logo-a" href="{% url 'home'%}"><label class="logo"><span>YourLogo</span>Here.</label></a>
+        <ul>
+            <!--<li><a href="{% url 'home'%}">AGENDAR HORÁRIO</a></li>
+            <span>|</span>
+            <li><a href="{% url 'home'%}">CONSULTAR HORÁRIO</a></li>
+            <span>|</span>
+            <li><a href="{% url 'home'%}">PERFIL</a></li>
+            <span>|</span> -->
+            <li><a class="effect-sair" href="{% url 'sair'%}"><button class="effect-sair">SAIR</button></a></li>
+        </ul>
+    </nav>
+    <div class="box">
+        <div class="Text-User">
+            <h1>Criar Evento Para</h1>
+                <h1 class="usuario-logado">
+                    {% if user.first_name == "" %}
+                        {{user.username}}
+                    {% else %}
+                        {{user.first_name}}
+                    {%endif%}
+                </h1>
+            
+        </div>
+        <form action="{% url 'agendamento' %}" method="POST">{% csrf_token %}
+            
+            <span class="text">
+                Evento:
+            </span>
+            <input type="text" name="evento" size="18">
+            <span class="text">
+                Local Do Evento:
+            </span>
+            <input type="text" name="local_evento" size="18">
+            <span class="text">
+                Data Do Evento:
+            </span>
+            <input id="day-select" type="datetime-local" name="data_evento">
+
+            <span class="text">
+                Descrição do evento:
+            </span>
+            <textarea id="descricao" name="descricao" rows="5" cols="19"></textarea>
+            {% if messages %}
+            {% for message in messages %}
+                <div class="alert {{message.tags}}">
+                    {{message}}
+                </div>
+            {% endfor %}
+        {% endif %}
+
+                <div class="btn-cadastrar-agendamento">
+                    <button type="submit" class="agendar">CRIAR</button>
+                    <a class="cancelar" href="{% url 'home' %}">VOLTAR</a>
+                </div>
+        </form>
+    </div>
+{% endblock %} 

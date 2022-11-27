@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block 'title' %}YourCompany | Entrar{% endblock %}
+
+{% block 'head' %}
+    <link rel="stylesheet" href="{% static 'autenticacao/css/logar.css' %}">
+    <!--<link rel="stylesheet" href="./static/autenticacao/css/logar.css">-->
+{% endblock %}
+
+{% block 'body' %}
+    <div class="box">
+        <div class="image">
+            <img src="{% static 'autenticacao/img/your-logo-here.png' %}" width=90vw>
+        </div>
+        <form action="{% url 'logar' %}" method="POST">{% csrf_token %}
+            <script>
+                const csrftoken = document.querySelector('[name=csrfmiddlewaretoken]').value;
+            </script>
+            
+            <!--<h1 class="titulo font-degrade borda-bottom-degrade">CADASTRAR</h2> -->
+            
+            <span class="span-descricao">Nome de usuário:</span>
+            <input type="text" class="form-control input-cadastro" name="username" autocomplete="off">
+            <span class="span-descricao">Senha:</span>
+            <input type="password" class="form-control input-cadastro" name="password" autocomplete="off">
+            <div class='link-align'>
+                <a href="{% url 'cadastrar' %}">Esqueci a Senha</a> <span class="span-align"> | </span> <a href="{% url 'cadastrar' %}">Criar Uma Conta</a>
+            </div>
+            {% if messages %}
+                {% for message in messages %}
+                    <div class="alert {{message.tags}}">
+                        {{message}}
+                    </div>
+                {% endfor %}
+            {% endif %}
+            <button  type="submit" class="btn-login">ENTRAR</button>
+        </form>
+    </div>
+{% endblock %} 

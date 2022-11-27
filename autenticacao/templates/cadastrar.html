@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block 'title' %}YourCompany | Cadastro{% endblock %}
+
+{% block 'head' %}
+    <link rel="stylesheet" href="{% static 'autenticacao/css/cadastrar.css' %}">
+{% endblock %}
+
+{% block 'body' %}
+    <div class="box">
+        <div class="image">
+            <img src="{% static 'autenticacao/img/your-logo-here.png' %}" width=80vw>
+        </div>
+        <form action="{% url 'cadastrar' %}" method="POST">{% csrf_token %}
+            
+            <!--<h1 class="titulo font-degrade borda-bottom-degrade">CADASTRAR</h2> -->
+            
+            <span class="span-descricao">Primeiro Nome:</span>
+            <input type="text" class="form-control input-cadastro" name="first_name" autocomplete="off" placeholder="ex: Ayra Adarga">
+            <span class="span-descricao">Nome de usuário:</span>
+            <input type="text" class="form-control input-cadastro" name="username" autocomplete="off" placeholder="ex: ayradarga">
+            <span class="span-descricao">Email:</span>
+            <input type="text" class="form-control input-cadastro" name="email" autocomplete="off" placeholder="Insira Um Email Válido!">
+            <span class="span-descricao">Senha:</span>
+            <input type="password" class="form-control input-cadastro" name="password" autocomplete="off">
+            <span class="span-descricao">Confirmar senha:</span>
+            <input type="password" class="form-control input-cadastro" name="confirm-password" autocomplete="off">
+            {% if messages %}
+                {% for message in messages %}
+                    <div class="alert {{message.tags}}">
+                        {{message}}
+                    </div>
+                {% endfor %}
+            {% endif %}
+            <button  type="submit" class="btn-cadastrar">CADASTRAR</button>
+            <span class="span-align"> OU </span>
+            
+        </form>
+        <div class='link-align'>
+            <a href="{% url 'logar'%}">VOLTAR</a>
+        </div>
+    </div>
+{% endblock %} 

@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block 'title' %}Agenda De {{user.first_name}}{% endblock %}
+
+{% block 'head' %}
+    <link rel="stylesheet" href="{% static 'agenda/css/agenda.css' %}">
+{% endblock %}
+
+{% block 'body' %}
+    <nav>
+        <!-- <a class="navbar-brand" href="{% url 'home'%}">
+            <img src="{% static 'autenticacao/img/VSBarbearia-White.png' %}" alt="logo VS Barbearia" width="60" height="50">
+        </a>
+        -->
+        <a class="logo-a" href="{% url 'home'%}"><label class="logo"><span>YourLogo</span>Here.</label></a>
+        <ul>
+            <!--<li><a href="{% url 'home'%}">AGENDAR HORÁRIO</a></li>
+            <span>|</span>
+            <li><a href="{% url 'home'%}">CONSULTAR HORÁRIO</a></li>
+            <span>|</span>
+            <li><a href="{% url 'home'%}">PERFIL</a></li>
+            <span>|</span> -->
+            <li><a class="effect-sair" href="{% url 'sair'%}"><button class="effect-sair">SAIR</button></a></li>
+        </ul>
+    </nav>
+    <div class="box">
+        <div class="Text-User">
+                <h1 class="usuario-logado">Agenda de
+                    {% if user.first_name == "" %}
+                        {{user.username}}
+                    {% else %}
+                        {{user.first_name}}
+                    {%endif%}
+                </h1>
+                <div style="overflow-x:auto;">
+                <table border="2">
+                    <tr>
+                    <th class="coluna1">ID</th>
+                    <th class="coluna1">Evento</th>
+                    <th class="coluna1">Local Do Evento</th>
+                    <th class="coluna1">Data Do Evento</th>
+                    <th class="coluna1">Descrição Do Evento</th>
+                    </tr>
+
+                {% for evento in eventos %}
+                <tr>
+                    <th class="coluna">{{evento.id}}</th>
+                    <th class="coluna">{{ evento.titulo }}</th>
+                    <th class="coluna">{{evento.local}}</th>
+                    <th class="coluna">{{evento.data_evento}}</th>
+                    <th class="coluna">{{evento.descricao}}</th>
+                </tr>
+                {%endfor%}
+            </table>
+            </div>
+            <form action="{% url 'delete_agenda' %}" method="POST">{% csrf_token %}
+                <input placeholder="Digite um ID para Exclusão" type="number" name="id_evento" size="12" >
+                <button type="submit" id="apagar_agenda" >APAGAR</button>
+            </form>
+            {% if messages %}
+                {% for message in messages %}
+                    <div class="alert {{message.tags}}">
+                        {{message}}
+                    </div>
+                {% endfor %}
+            {% endif %}
+        </div>
+
+
+                <div class="btn-cadastrar-agendamento" >
+                    <a class="cancelar" href="{% url 'home' %}">VOLTAR</a>
+                </div>
+    </div>
+{% endblock %} 

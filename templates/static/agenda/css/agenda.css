@@ -1,0 +1,450 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+input[type='date']{
+    background-color: #2c3e50;
+    padding: 5px;
+    font-family: "Roboto Mono",monospace;
+    color: white;
+    font-size: 12pt;
+    border: none;
+    outline: none;
+    border-radius: .25em;
+    width: 20em;
+    height: 3em;
+    box-shadow: 0px 0px 15px #000000;
+}
+
+input[type='datetime-local']{
+    background-color: #2c3e50;
+    padding: 5px;
+    font-family: "Roboto Mono",monospace;
+    color: white;
+    font-size: 12pt;
+    border: none;
+    outline: none;
+    border-radius: .25em;
+    width: 20em;
+    height: 3em;
+    box-shadow: 0px 0px 15px #000000;
+}
+
+input[type='text']{
+    background-color: #2c3e50;
+    padding: 5px;
+    font-family: "Roboto Mono",monospace;
+    color: white;
+    font-size: 12pt;
+    border: none;
+    outline: none;
+    border-radius: .25em;
+    width: 20em;
+    height: 3em;
+    box-shadow: 0px 0px 15px #000000;
+}
+
+input[type='number']{
+    background-color: #2c3e50;
+    padding: 5px;
+    font-family: "Roboto Mono",monospace;
+    color: white;
+    font-size: 12pt;
+    border: none;
+    outline: none;
+    border-radius: .25em;
+    width: 20em;
+    height: 3em;
+    box-shadow: 0px 0px 15px #000000;
+}
+
+#descricao{
+    background-color: #2c3e50;
+    padding: 5px;
+    font-family: "Roboto Mono",monospace;
+    color: white;
+    font-size: 12pt;
+    border: none;
+    outline: none;
+    border-radius: .25em;
+    width: 20em;
+    height: 3em;
+    box-shadow: 0px 0px 15px #000000;
+}
+
+
+::-webkit-calendar-picker-indicator {
+    background-color: #ffff;
+    padding: 1%;
+    font-size: 16pt;
+    cursor: pointer;
+    border-radius: .25em;
+}
+
+a.button-home:hover{
+    text-decoration: none;
+    width: 100%;
+}
+
+a.logo-a{
+    text-decoration: none;
+    color: white;
+}
+
+a.logo-a:hover{
+    text-decoration: none;
+    color: white;
+}
+
+
+a.button-home{
+    text-decoration: none;
+    width: 100%;
+}
+
+:root {
+    --menu-and-button-collor: #BF8404;
+}
+
+
+
+.fundo{
+
+    background-color: #303240;
+    color: white;
+
+}
+
+
+.box {
+    
+    background-color: #272833;
+    width: 80%;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    padding: 10px;
+    margin: 20px 10vw;
+    box-shadow: 0px 0px 10px var(--menu-and-button-collor);
+    border-radius: 10px;
+}
+
+.Text-User{
+    flex-direction: column;
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+
+.btn-cadastrar-agendamento{
+    display: flex;
+    margin-top: 20px;
+    padding: 0;
+    flex-direction: row-reverse;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-content: center;
+}
+
+.btn-cadastrar-agendamento a.cancelar{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #ffffff;
+    color:#000000;
+    font-size: 12pt;
+    border: none;
+    border-radius: 0.7vw;
+    align-content: center;
+    justify-content: center;
+    font-weight: bold;
+    letter-spacing: 5px;
+    box-shadow: 0px 0px 15px #000000;
+    text-decoration: none;
+}
+
+.btn-cadastrar-agendamento a.cancelar:hover{
+    box-shadow: 0px 0px 15px #fffbfb86;
+    transition: .25s;
+    text-decoration: none;
+}
+
+.btn-cadastrar-agendamento button.agendar:hover{
+    box-shadow: 0px 0px 15px #198000;
+    transition: .25s;
+    text-decoration: none;
+}
+.btn-cadastrar-agendamento button.agendar{
+
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #198000;
+    color:#ffff;
+    font-size: 12pt;
+    border: none;
+    border-radius: 0.7vw;
+    align-content: center;
+    justify-content: center;
+    font-weight: bold;
+    letter-spacing: 5px;
+    box-shadow: 0px 0px 15px #000000;
+}
+
+.btn-cadastrar-agendamento button.agendar-red:hover{
+    box-shadow: 0px 0px 15px #198000;
+    transition: .25s;
+    text-decoration: none;
+}
+.btn-cadastrar-agendamento button.agendar-red{
+
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #dd0000;
+    color:#ffff;
+    font-size: 12pt;
+    border: none;
+    border-radius: 0.7vw;
+    align-content: center;
+    justify-content: center;
+    font-weight: bold;
+    letter-spacing: 5px;
+    box-shadow: 0px 0px 15px #000000;
+}
+
+#apagar_agenda{
+    
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    padding: 10px;
+    background-color: #BF8404;
+    color:#ffff;
+    font-size: 12pt;
+    border: none;
+    border-radius: 0.7vw;
+    align-content: center;
+    justify-content: center;
+    font-weight: bold;
+    letter-spacing: 5px;
+    box-shadow: 0px 0px 15px #000000;
+}
+
+#apagar_agenda:hover{
+    background-color: #c20505;
+    box-shadow: 0px 0px 15px #a7030386;
+    transition: .25s;
+    text-decoration: none;
+}
+
+div.Text-Teste span.text{
+    display: flex;
+    flex-direction: column;
+    margin-left: 25%;
+}
+
+.text{
+    display: flex;
+    padding-left: 5px;
+    margin-top: 30px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+
+.select::after {
+    -webkit-transition: .25s all ease;
+    transition: .25s all ease;
+    content: '\25BC';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0 1em;
+    background: #34495e;
+    pointer-events: none;
+}
+
+.select:hover::after{
+    color: #f39c12;
+}
+
+.select {
+    position: relative;
+    display: block;
+    width: 20em;
+    height: 3em;
+    line-height: 3;
+    background: #2c3e50;
+    overflow: hidden;
+    border-radius: .25em;
+    font-family: "Roboto Mono",monospace;
+    box-shadow: 0px 0px 10px #000000;
+}
+
+select::-ms-expand{
+    display: none;
+}
+
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+    outline: 0;
+    box-shadow: none;
+    border: 0 !important;
+    background: #2c3e50;
+    background-image: none;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0 0 0 .5em;
+    color: #fff;
+    cursor: pointer;
+    
+}
+
+nav{
+    
+    background-color: #1a1b22;
+    color: white;
+    padding: 5px;
+    box-shadow: 0px 0px 10px var(--menu-and-button-collor);
+}
+
+nav ul {
+    float: right;
+    margin: 0px;
+}
+
+nav ul li{
+    display: inline-block;
+    line-height: 30px;
+    margin: 0 0px;
+    margin-right: 10px;
+}
+
+.logo {
+    font-size: 16pt;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-left: 5px;
+}
+
+.logo span {
+    color: var(--menu-and-button-collor);
+}
+
+
+
+
+a button.effect-sair{
+    width: 100%;
+    padding: 5px;
+    background-color: #ffffff;
+    color:#000000;
+    font-size: 12pt;
+    border: none;
+    border-radius: 0.7vw;
+    font-weight: bold;
+    letter-spacing: 1px;
+    box-shadow: 0px 0px 8px #ffffff;
+}
+
+a button.effect-sair:hover{
+    color: #ffffff;
+    background-color: #ff0000;
+    transition: .5s;
+    box-shadow: 0px 0px 30px #ff0000;
+    
+}
+
+h1{
+    text-align: center;
+    }
+    
+    table, th, td {
+    border: 1px solid #5568FE;
+    }
+    
+    table {
+    border-collapse: collapse;
+    margin: auto;
+    box-sizing: border-box;
+    }
+    
+    th, td{
+    padding: 10px;
+    text-align: center;
+    width: 100vw;
+    background-color: #2c3e50;
+    }
+    
+    th.coluna{
+    font-weight: bold;
+    text-align: left;
+    background-color: #1B1F27;
+    }
+
+    th.coluna1{
+        font-weight: bold;
+        text-align: center;
+        background-color: #2c3e50;
+        }
+    
+    
+    
+    th.coluna:hover() {
+    background-color: #085F63;
+    color: #fff;
+    }
+    
+
+.usuario-logado{
+    text-transform: capitalize;
+    color: var(--menu-and-button-collor);
+    margin-bottom: 5vh;
+}
+
+@media (max-width: 700px) { 
+    table, th, td {
+        border: 1px solid #5568FE;
+        height: 10px;
+        }
+        
+        table {
+        border-collapse: separate;
+        margin: auto;
+        box-sizing: border-box;
+        }
+        
+        th, td{
+        padding: 10px;
+        text-align: center;
+        width: 100vw;
+        background-color: #2c3e50;
+        }
+        
+        th.coluna{
+        font-weight: bold;
+        text-align: left;
+        background-color: #1B1F27;
+        }
+    
+        th.coluna1{
+            font-weight: bold;
+            text-align: center;
+            background-color: #2c3e50;
+            width: 100%;
+            height: 100%;
+            }
+  }

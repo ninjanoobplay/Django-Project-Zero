@@ -1,0 +1,160 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+a.button-home:hover{
+    text-decoration: none;
+    width: 100%;
+}
+
+
+a.button-home{
+    text-decoration: none;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+:root {
+    --menu-and-button-collor: #BF8404;
+}
+
+
+
+.fundo{
+
+    background-color: #303240;
+    color: white;
+
+}
+
+
+.box {
+    
+    background-color: #272833;
+    width: 80%;
+    display:grid;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    padding: 10px;
+    margin: 20px 10vw;
+    box-shadow: 0px 0px 10px var(--menu-and-button-collor);
+    border-radius: 10px;
+}
+
+.Text-User{
+    
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.box-secundary {
+    
+    background-color: #1a1b22;
+    width: 80%;
+    display:grid;
+    justify-content: center;
+    padding: 10px;
+    box-shadow: 0px 0px 15px #000000;
+    border-radius: 10px;
+}
+
+nav{
+    
+    background-color: #1a1b22;
+    color: white;
+    padding: 5px;
+    box-shadow: 0px 0px 10px var(--menu-and-button-collor);
+}
+
+nav ul {
+    float: right;
+    margin: 0px;
+}
+
+nav ul li{
+    display: inline-block;
+    line-height: 30px;
+    margin: 0 0px;
+    margin-right: 10px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+nav ul li a:hover{
+    text-decoration: none;
+    color: #59cf3b;
+    font-weight: bold;
+    transition: .5s;
+
+}
+
+
+.logo {
+    font-size: 16pt;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-left: 5px;
+}
+
+.logo span {
+    color: var(--menu-and-button-collor);
+}
+
+nav ul span {
+    padding: 0px 10px;
+}
+
+
+a button.effect-sair{
+    width: 100%;
+    padding: 5px;
+    background-color: #ffffff;
+    color:#000000;
+    font-size: 12pt;
+    border: none;
+    border-radius: 0.7vw;
+    font-weight: bold;
+    letter-spacing: 1px;
+    box-shadow: 0px 0px 8px #ffffff;
+}
+
+a button.effect-sair:hover{
+    color: #ffffff;
+    background-color: #ff0000;
+    transition: .5s;
+    box-shadow: 0px 0px 30px #ff0000;
+    
+}
+
+.usuario-logado{
+    text-transform: capitalize;
+    color: var(--menu-and-button-collor);
+}
+
+button.btn-menu{
+        max-width: 600px;
+        width: 400px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        padding: 8px;
+        background-color: var(--menu-and-button-collor);
+        color:#ffff;
+        font-size: 16pt;
+        border: none;
+        border-radius: 0.7vw;
+        align-content: center;
+        justify-content: center;
+        font-weight: bold;
+        letter-spacing: 5px;
+        box-shadow: 0px 0px 30px #000000;
+}
