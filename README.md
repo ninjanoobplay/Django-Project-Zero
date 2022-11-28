@@ -54,9 +54,9 @@ E Para Iniciar o Projeto
 
 Para Windows:
 ```
-python manage.py migrate --run-syncdb
+python manage.py migrate
 ```
-Ou
+E dps:
 
 ```
 python manage.py migrate --run-syncdb
@@ -80,6 +80,8 @@ localhost:8000
 ```
 
 ## Imagens do Layout Que Estou Utilizando:
+
+# Em Breve!
 
 ### Login:
 
